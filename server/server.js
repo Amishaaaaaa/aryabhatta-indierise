@@ -1,19 +1,23 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require("cors");
 // const adminRoute = require('./routes/admin');
 // const userRoute = require('./routes/user')
-const apiRoute = require('./routes/api');
+// const apiRoute = require('./routes/api');
 const transcriptRoute = require('./routes/callTranscript')
 const phoneNumberRoute = require('./routes/phoneNumber')
 
 const app = express();
+app.use(cors())
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
-    res.json({"users": ["userOne", "userTwo", "userThree", "userFour"] })
+app.get("/api", (req, res) => {
+    res.json({
+        products: ["product1", "product2", "product3", "product4"],
+    })
 })
 
-app.use("/api", apiRoute);
+// app.use("/api", apiRoute);
 app.use("/callTranscript", transcriptRoute);
 app.use("/phoneNumber", phoneNumberRoute);
 // app.use("/admin", adminRoute);

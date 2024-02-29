@@ -1,28 +1,29 @@
-import React, { useEffect, useState} from 'react'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-function App() {
-  const [backendData, setBackendData] = useState([{}])
+const App = () => {
+  const [productsData, setProductsData] = useState([]);
 
-  useEffect (() => {
-    fetch("/api").then(
-      response => response.json()
-    ).then (
-      data => {
-        setBackendData(data);
-      }
-    )
-  }, [])
-return (
-<div>
-  {(typeof backendData.users === 'undefined') ? (
-  <p>Loading ...</p>
-  ) : (
-  backendData.users.map((user, i) => (
-  <p key={i}>{user}</p>
-    ))
-  )}
-</div>
-)
-}
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api")
+      .then((response) => {
+        setProductsData(response.data.products);
+      })
+      .catch((error) => {
+        console.error(`Error fetching data: ${error.message}`);
+      });
+  }, []);
 
-export default App
+  return (
+    <div style={{ textAlign: "center", fontSize: "42px" }}>
+      {productsData && productsData.length > 0 ? (
+        productsData.map((el, ind) => <p key={ind}>{el}</p>)
+      ) : (
+        <p>Loading...</p>
+      )}
+    </div>
+  );
+};
+
+export default App;

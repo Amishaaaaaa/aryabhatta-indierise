@@ -2,19 +2,24 @@ const mongoose = require("mongoose");
 
 mongoose.connect("mongodb+srv://amishamishra12886:lWllpdczzsOA7oJj@cluster0.bv6fqzo.mongodb.net/aryabhatta?retryWrites=true&w=majority");
 
-const callTranscript = new mongoose.Schema({
-    time: String,
-    topic: String,
-    record: String
+const callHistory = new mongoose.Schema({
+    Topic: String,
+    Time: String,
+    AgentUsed: String,
+    Duration: String,
+    Transcript: String
 });
 
-const phoneNumber = new mongoose.Schema({
-    phoneNumber: String,
+const userDetails = new mongoose.Schema({
+    Username: String,
+    PhoneNumber: String,
+    Profession: String,
+    Organisation: String
 })
 
-const Transcript = mongoose.model('callTranscript', callTranscript);
-const Phone = mongoose.model('phoneNumber', phoneNumber);
+const Call_history = mongoose.model('callHistory', callHistory);
+const User_details = mongoose.model('userDetails', userDetails);
 module.exports = {
-    Transcript,
-    Phone
+    Call_history,
+    User_details
 }

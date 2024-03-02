@@ -1,19 +1,23 @@
 const { Router } = require("express");
-const { Transcript } = require("../db");
+const { Call_history } = require("../db");
 const router = Router();
 
-router.post('/transcripts', (req, res) => {
-    const time = req.body.time;
-    const topic = req.body.topic;
-    const record = req.body.record;
+router.post('/', (req, res) => {
+    const Topic = req.body.Topic;
+    const Time = req.body.Time;
+    const AgentUsed = req.body.AgentUsed;
+    const Duration = req.body.Duration;
+    const Transcript = req.body.Transcript;
 
     // Check if callTranscripts is properly defined
-    if (Transcript) {
+    if (Call_history) {
         // Assuming callTranscripts has a 'create' method
-        Transcript.create({
-            time,
-            topic,
-            record
+        Call_history.create({
+            Topic,
+            Time,
+            AgentUsed,
+            Duration,
+            Transcript
         })
         .then(function(newTranscript) {
             res.json({
@@ -28,11 +32,11 @@ router.post('/transcripts', (req, res) => {
     }
 })
 
-router.get('/transcripts', async (req, res) => {
-    const response = await Transcript.find({});
+router.get('/', async (req, res) => {
+    const response = await Call_history.find({});
 
     res.json({
-        Transcript : response
+        Call_history : response
     })
 })
 

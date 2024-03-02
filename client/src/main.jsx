@@ -4,8 +4,8 @@ import App from './App.jsx'
 import './index.css'
 // import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Transcripts } from './components/Transcripts.jsx';
-import { ContactDetails } from './components/ContactDetails.jsx';
+import { CallHistory } from './components/CallHistory.jsx';
+import { UserDetails } from './components/UserDetails.jsx';
 import { HomePage } from './components/HomePage.jsx';
 
 const router = createBrowserRouter([
@@ -14,12 +14,12 @@ const router = createBrowserRouter([
     element: <HomePage />
   },
   {
-    path: '/transcripts',
-    element: <Transcripts />
+    path: '/callHistory',
+    element: <CallHistory />
   },
   {
-    path: '/contact-details',
-    element: <ContactDetails />
+    path: '/userDetails',
+    element: <UserDetails />
   }
 ]);
 

@@ -13,13 +13,14 @@ export function ContactDetails() {
         .catch(err => console.log(err))
       }, []);
     return (
+        
         <div>
         {Array.isArray(contact_details) && contact_details.map((contact_detail, index)=> (
           <div key={index}>
           <div style={{
             backgroundColor: "#F0F8FF"
           }}>
-          <p>Time: {contact_detail.phoneNumber}</p>
+          <p>Contact Number: {contact_detail.phoneNumber}</p>
           </div>
           </div>
         ))}

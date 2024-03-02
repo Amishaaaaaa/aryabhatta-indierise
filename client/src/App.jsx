@@ -1,10 +1,13 @@
 import { Transcripts } from './components/Transcripts';
 import { ContactDetails } from './components/ContactDetails';
-function App() {
+import { HomePage } from './components/HomePage';
 
+function App() {
+ 
   return (
-      <div>
-        <Transcripts />
+    <div>
+        <HomePage />
+        <Transcripts /> 
         <ContactDetails />
       </div>
   )

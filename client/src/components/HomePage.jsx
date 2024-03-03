@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import myImage from './aryabhatta-logo.jpg';
 // import { Container, Row, Col } from 'react-bootstrap';
+import SplitPane from "react-split-pane";
 
 export function HomePage() {
     const navigate = useNavigate();
@@ -11,9 +12,24 @@ export function HomePage() {
       const ContactOnClick = () => {
         navigate('/userDetails');
       };
+      const agentOnClick = () => {
+        navigate('./aiAgents');
+      };
     return (
-        <div>
-            <div style={{
+            <SplitPane split="vertical" minSize={280} >
+                <div style={{backgroundColor:"grey",height:"100%"}}>
+                    <h2>AI Agents</h2>
+                <div style={{
+                    backgroundColor:"pink",
+                    color:"white",
+                    width:"100px",
+                    height:"30px",
+                    padding:"20px",
+                    cursor:"pointer"
+                }} onClick={agentOnClick} >AI Agents</div>
+                </div>
+                <div style={{backgroundColor:"white",height:"100%"}}>
+                <div style={{
                 alignItems:"center",
                 display:"flex",
                 fontSize:"30px",
@@ -26,32 +42,6 @@ export function HomePage() {
             />
             <h1>Aryabhatta</h1>
             </div>
-
-            {/* <Container>
-                <Row style={{
-                    border:"2px solid red"
-                }}>
-                    <Col style={{
-                        border:"2px solid black"
-                    }} lg={8}>fdfdbb1</Col>
-                    <Col style={{
-                        border:"2px solid black"
-                    }} lg={4}>bfdbdb2</Col>
-                </Row>
-                <Row style={{
-                    border:"2px solid red"
-                }}>
-                    <Col style={{
-                        border:"2px solid black"
-                    }}>efswg</Col>
-                    <Col style={{
-                        border:"2px solid black"
-                    }}>edbdxb</Col>
-                    <Col style={{
-                        border:"2px solid black"
-                    }}>edvdvsxv</Col>
-                </Row>
-            </Container> */}
 
             <div style={{
                 display:"flex",
@@ -68,14 +58,7 @@ export function HomePage() {
                     padding:"20px",
                     cursor:"pointer"
                 }}></div> */}
-                <div style={{
-                    backgroundColor:"pink",
-                    color:"white",
-                    width:"100px",
-                    height:"30px",
-                    padding:"20px",
-                    cursor:"pointer"
-                }}>AI Agents</div>
+                
                 <div style={{
                     backgroundColor:"pink",
                     color:"white",
@@ -123,6 +106,34 @@ export function HomePage() {
             }}>
             </div>
             </div>
-        </div>
+                </div>
+            </SplitPane>
     )
 }
+
+
+            {/* <Container>
+                <Row style={{
+                    border:"2px solid red"
+                }}>
+                    <Col style={{
+                        border:"2px solid black"
+                    }} lg={8}>fdfdbb1</Col>
+                    <Col style={{
+                        border:"2px solid black"
+                    }} lg={4}>bfdbdb2</Col>
+                </Row>
+                <Row style={{
+                    border:"2px solid red"
+                }}>
+                    <Col style={{
+                        border:"2px solid black"
+                    }}>efswg</Col>
+                    <Col style={{
+                        border:"2px solid black"
+                    }}>edbdxb</Col>
+                    <Col style={{
+                        border:"2px solid black"
+                    }}>edvdvsxv</Col>
+                </Row>
+            </Container> */}

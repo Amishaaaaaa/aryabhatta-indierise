@@ -2,11 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-// import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { CallHistory } from './components/CallHistory.jsx';
 import { UserDetails } from './components/UserDetails.jsx';
 import { HomePage } from './components/HomePage.jsx';
+import { AiAgents } from './components/AiAgents.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: '/userDetails',
     element: <UserDetails />
+  },
+  {
+    path: '/aiAgents',
+    element: <AiAgents />
   }
 ]);
 

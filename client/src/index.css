@@ -1,8 +1,14 @@
-
+.right {
+  background-image: url(./components/background-right.jpg);
+}
+.left {
+  background-image: url(./components/background-left.jpg);
+  background-size: cover;
+}
 span.Resizer.vertical {
   cursor: col-resize;
-  width: 10px;
-  background: rgba(88, 34, 34, 0.622);
+  width: 4px;
+  background: rgba(0, 0, 0, 0.966);
 }
  /* :root {
   color: rgba(0, 0, 0, 0.87);

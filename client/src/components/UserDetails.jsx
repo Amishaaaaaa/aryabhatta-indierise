@@ -18,12 +18,14 @@ export function UserDetails() {
         {Array.isArray(contact_details) && contact_details.map((contact_detail, index)=> (
           <div key={index}>
           <div style={{
-            backgroundColor: "#F0F8FF"
+            backgroundColor: "#F0F8FF",
+            padding:"5px",
+            margin:"5px"
           }}>
-          <p>Username: {contact_detail.Username}</p>
-          <p>Contact Number: {contact_detail.PhoneNumber}</p>
-          <p>Profession: {contact_detail.Profession}</p>
-          <p>Organisation: {contact_detail.Organisation}</p>
+          <p><b>Username: </b>{contact_detail.Username}</p>
+          <p><b>Contact Number: </b>{contact_detail.PhoneNumber}</p>
+          <p><b>Profession: </b>{contact_detail.Profession}</p>
+          <p><b>Organisation: </b>{contact_detail.Organisation}</p>
           </div>
           </div>
         ))}

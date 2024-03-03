@@ -18,14 +18,15 @@ export function CallHistory() {
         {Array.isArray(transcripts) && transcripts.map((transcript, index)=> (
           <div key={index}>
           <div style={{
-            backgroundColor: "#F0F8FF"
+            backgroundColor: "#F0F8FF",
+            padding:"5px",
+            margin:"5px"
           }}>
-          <h2>Topic: {transcript.Topic}</h2><br/>
-          <p>Time: {transcript.Time}<br/>
-          {transcript.Transcript}</p>
-          {transcript.AgentUsed}
-          {transcript.Duration}
-          {transcript.Transcript}
+          <h2>Topic: {transcript.Topic}</h2>
+          <p><b>Time: </b>{transcript.Time}<br/></p>
+          <p><b>Agent Used:</b> {transcript.AgentUsed}</p>
+          <p><b>Duration: </b>{transcript.Duration}</p>
+          <p><b>Transcript: </b>{transcript.Transcript}</p>
           </div>
           </div>
         ))}

@@ -1,9 +1,58 @@
+body {
+  background-image: url(./components/background-right.jpg);
+
+  height: 2000px;
+}
+
 .right {
   background-image: url(./components/background-right.jpg);
+  height: 900px;
 }
 .left {
   background-image: url(./components/background-left.jpg);
   background-size: cover;
+  height: 900px;
+}
+.top-left {
+  font-size:30px;
+  font-weight:bold;
+  color:black;
+  padding:20px;
+  display:flex;
+  height:70px;
+  justify-content:center;
+  align-items:center
+}
+.heading {
+    align-items:center;
+    display:flex;
+    font-size:30px;
+    gap: 20px;
+    color:black;
+}
+
+.outer-container {
+    display:flex;
+    justify-content: left;
+    align-items:center;
+    margin-left:220px;
+    gap:10px;
+    margin-top:50px
+}
+
+.inner-container {
+    background-color:white;
+    color:black;
+    width:100px;
+    height:30px;
+    padding:20px;
+    cursor:pointer;
+    border-radius:8%;
+    font-size:19px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center
 }
 span.Resizer.vertical {
   cursor: col-resize;

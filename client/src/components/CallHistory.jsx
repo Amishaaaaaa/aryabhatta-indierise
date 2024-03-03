@@ -13,8 +13,10 @@ export function CallHistory() {
         .catch(err => console.log(err))
       }, []);
     return (
-        <div>
-          <h1>Call History</h1>
+      <div className="right">
+          <h1 style={{
+            color:"whitesmoke"
+          }}>Call History</h1>
         {Array.isArray(transcripts) && transcripts.map((transcript, index)=> (
           <div key={index}>
           <div style={{

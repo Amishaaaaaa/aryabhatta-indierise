@@ -13,8 +13,10 @@ export function UserDetails() {
         .catch(err => console.log(err))
       }, []);
     return (
-        <div>
-          <h1>User Details</h1>
+        <div className="right">
+          <h1 style={{
+            color:"whitesmoke"
+          }}>User Details</h1>
         {Array.isArray(contact_details) && contact_details.map((contact_detail, index)=> (
           <div key={index}>
           <div style={{

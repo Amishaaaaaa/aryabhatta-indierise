@@ -17,8 +17,8 @@ export default App
 
 //re-rendering after every 3 seconds
 //logo ✅
-//view your teachers
+//view your teachers ✅
 //table schema modify ✅
-//UI
+//UI ✅
 // frontend display of data ✅
 // indierise logo

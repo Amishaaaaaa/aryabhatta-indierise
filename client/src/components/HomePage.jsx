@@ -68,9 +68,10 @@ export function HomePage() {
                 margin:"40px",
                 backgroundColor:"lightcyan",
                 marginColor:"lightskyblue",
-                height:"350px",
+                height:"290px",
                 width:"800px",
-                borderRadius:"10px"
+                borderRadius:"10px",
+                cursor:"text"
             }}>
             </div>
             </div>
